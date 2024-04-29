@@ -1,0 +1,37 @@
+appId: "com.tejimandi.android.beta"
+---
+- launchApp: 
+    appId: "com.tejimandi.android.beta"
+    clearState: false
+- assertVisible: "Select a Plan"
+- tapOn: "Back"
+- tapOn: "Portfolio\nTab 2 of 4"
+- tapOn:
+    point: "80%,43%"
+- tapOn: "Performance"  
+- scroll
+- assertVisible: "6M"
+- tapOn: "6M" 
+- tapOn: "Stocks"
+- scroll
+- tapOn: "View More"
+- assertVisible: "Past Winners"
+- tapOn: "Back"
+- assertVisible: "Subscribe Now"
+- tapOn: "Subscribe Now"
+- scroll
+- tapOn:
+    point: "12%,86%"
+- tapOn: "Proceed to Pay"    
+
+    
+    
+    
+#- tapOn: "Back"
+#- tapOn: "Subscribe"
+#- tapOn: "Performance"
+#- tapOn: "Stocks"
+#- tapOn: "Subscribe Now"
+#- tapOn:
+#    point: "12%,86%"
+#- tapOn: "Proceed to Pay"

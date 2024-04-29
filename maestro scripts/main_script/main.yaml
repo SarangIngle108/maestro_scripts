@@ -1,0 +1,35 @@
+appId: "com.tejimandi.android.beta"
+#Vairables
+env:
+    kycHeader: Verify KYC
+    planHeader: Select a Plan 
+---
+#App Launch
+- launchApp:
+    appId: "com.tejimandi.android.beta"
+    clearState: true
+#for Login
+- runFlow: features/login.yaml
+# when: visible: checks if text is available on screen
+# and run sets of commands or a file
+- runFlow: 
+    # file: main.yaml
+    when:
+      visible: ${kycHeader}
+    commands:
+        - tapOn:
+            leftOf: ${kycHeader}
+- runFlow:
+    when:
+      visible: ${planHeader}
+    commands:
+        - tapOn: 
+            leftOf: ${planHeader}
+#SUbscription
+- runFlow: features/subscription_sarang.yaml
+- runFlow: 
+    when:
+      visible: ${kycHeader}
+    commands:
+        - tapOn:
+            leftOf: ${kycHeader}

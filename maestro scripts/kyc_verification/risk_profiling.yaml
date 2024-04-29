@@ -1,0 +1,76 @@
+appId: "com.tejimandi.android.beta"
+---
+
+- launchApp: 
+    appId: "com.tejimandi.android.beta"
+    clearState: false   
+
+- assertVisible: "Setup your risk profile"
+- tapOn: "Start"
+
+#Risk Profiling
+
+#Question 1
+- assertVisible: "What best describes your investing goals?"
+- tapOn: "Grow my Capital while protecting my investment
+
+    Investment Horizon ≻ 3 years"
+
+#Question 2
+- assertVisible: "What is your income per year?"
+- tapOn: "10 lakh - 50 lakh"
+
+#Question 3
+- assertVisible: "How do you rate your willingness to take financial risks?"
+- tapOn: "Medium risk taker"
+
+#Question 4
+- assertVisible: "What percent of your monthly income do you use to pay loans and liabilities?"
+- tapOn: "Less than 20%"
+
+#Question 5
+- assertVisible: "Select all the investments you currently hold"
+- tapOn: "Bank FD"
+- tapOn: "Mutual Funds"
+
+#COnfirming the risk profile questionary
+- tapOn: "Confirm and Proceed"
+
+
+#Change Answers
+#User can go for change in answers
+- tapOn: "Change Answers"
+
+
+#Question 1
+- assertVisible: "What best describes your investing goals?"
+- tapOn: "Grow my Capital while protecting my investment
+
+    Investment Horizon ≻ 3 years"
+
+#Question 2
+- assertVisible: "What is your income per year?"
+- tapOn: "Less than 10 lakh"
+
+#Question 3
+- assertVisible: "How do you rate your willingness to take financial risks?"
+- tapOn: "Medium risk taker"
+
+#Question 4
+- assertVisible: "What percent of your monthly income do you use to pay loans and liabilities?"
+- tapOn: "20% - 50%" 
+
+#Question 5
+- assertVisible: "Select all the investments you currently hold"
+- tapOn: "Bank FD"
+- tapOn: "Mutual Funds"
+
+#COnfirming the risk profile questionary
+- tapOn: "Confirm and Proceed"
+
+#confirming the risk policy strategy
+- assertVisible: "Change Answers"
+- tapOn: 
+    point: "16%,85%"
+
+

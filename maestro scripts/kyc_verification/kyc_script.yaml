@@ -1,0 +1,65 @@
+appId: "com.tejimandi.android.beta"
+
+
+---
+- launchApp: 
+    appId: "com.tejimandi.android.beta"
+    clearState: false   
+
+- runFlow:
+    when:
+      visible: "Setup your risk profile"
+    file: "risk_profiling.yaml"
+
+- runFlow:
+    when:
+      visible: "Setup your risk profile"
+    file: "risk_profiling.yaml"
+#Skippin the verify kyc page initially
+- assertVisible: "Verify KYC"
+- tapOn: "Back"
+
+#Navigating to portfolio tab
+- tapOn: "Portfolio\nTab 2 of 4"    
+
+- tapOn: "View Stocks"
+
+- runFlow:
+    when:
+      visible: "Setup your risk profile"
+    file: "risk_profiling.yaml"
+
+#Entering KYC Verification Details
+
+#Getting PAN NO. Input
+- tapOn: "Enter PAN No."
+- inputText : "AMCPI6953L"
+
+#Getting DOB 
+- tapOn: "01-01-2001"
+- tapOn: "April 2024"
+- tapOn: "2024"
+- tapOn:
+    point: "69%,34%"
+- tapOn:
+    point: "69%,34%"
+- tapOn: "2002"
+- tapOn: "Wed, May 1"
+- tapOn: "1, Wednesday, May 1, 2002"     
+
+#ready to continue
+- tapOn: "Continue"
+
+- runFlow:
+    when:
+      visible: "Setup your risk profile"
+    file: "risk_profiling.yaml"
+
+
+#- tapOn: "Account\nTab 4 of 4"
+# - scroll
+# - tapOn: "Get Help"
+# - tapOn: "App Guide"
+# - tapOn:
+#     point: "0%,100%" 
+     # Tap on How to invest in the portfolio main category Correct

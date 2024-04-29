@@ -1,0 +1,12 @@
+appId: "com.tejimandi.android.beta"
+---
+- launchApp: 
+    appId: "com.tejimandi.android.beta"
+    clearState: false   
+- tapOn: "Account\nTab 4 of 4"
+- scroll
+- tapOn: "Get Help"
+- tapOn: "App Guide"
+- tapOn:
+    point: "0%,100%"  # Tap on How to invest in the portfolio main category Correct
+

@@ -1,0 +1,58 @@
+appId: "com.tejimandi.android.beta"
+---
+- launchApp: 
+    appId: "com.tejimandi.android.beta"
+    clearState: false
+- assertVisible: "Select a Plan"
+- tapOn: "Back"
+- tapOn: "Portfolio\nTab 2 of 4"
+- tapOn:
+    point: "80%,43%"
+- tapOn: "Performance"  
+- scroll
+- assertVisible: "6M"
+- tapOn: "6M" 
+- tapOn: "Stocks"
+- scroll
+- tapOn: "View More"
+- assertVisible: "Past Winners"
+- tapOn: "Back"
+- assertVisible: "Subscribe Now"
+- tapOn: "Subscribe Now"
+- scroll
+- tapOn:
+    point: "12%,86%"
+- tapOn: "Proceed to Pay"    
+- assertVisible: "Teji Mandi"
+- tapOn: "UPI ..."
+- assertVisible: "Pay With UPI ID/ Mobile Number"
+- tapOn:
+    id: "vpa-upi"
+- inputText : "9527487081"
+- tapOn:
+    point: "6%,9%"       
+- tapOn:
+    point: "94%,9%"
+- assertVisible: "Cancel"
+- tapOn: "Cancel" 
+- assertVisible: "Proceed to Pay"
+- tapOn: "Proceed to Pay"
+- assertVisible: "Teji Mandi"
+- tapOn: "UPI ..."  
+- assertVisible: "Pay With UPI ID/ Mobile Number"
+- tapOn:
+    id: "vpa-upi"
+- inputText : "9527487081"
+#- tapOn: "Pay Now" 
+
+    
+    
+    
+#- tapOn: "Back"
+#- tapOn: "Subscribe"
+#- tapOn: "Performance"
+#- tapOn: "Stocks"
+#- tapOn: "Subscribe Now"
+#- tapOn:
+#    point: "12%,86%"
+#- tapOn: "Proceed to Pay"

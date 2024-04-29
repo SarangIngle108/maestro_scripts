@@ -1,0 +1,20 @@
+appId: "com.tejimandi.android.beta"
+---
+- tapOn: "ENGLISH"
+- tapOn: "Login"
+- tapOn: "Phone Number"
+- inputText: "9769114299"
+- tapOn: "Authenticate"
+- tapOn: "3"
+- tapOn: "6"
+- tapOn: "1"
+- tapOn: "1"
+- tapOn: 
+    below: "7"
+- runFlow: 
+    # file: main.yaml
+    when:
+      visible: ${kycHeader}
+    commands:
+        - tapOn:
+            leftOf: ${kycHeader}
